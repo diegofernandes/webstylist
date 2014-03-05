@@ -1,0 +1,23 @@
+!!! 5
+%html
+	%head
+		%title
+			Webstylist
+		=stylesheet_link_tag  "application", media: "all", "data-turbolinks-track" => true
+		=javascript_include_tag "application", "data-turbolinks-track" => true
+		=csrf_meta_tags
+	%body
+		#nav{:class=>"navbar navbar-inverse"}
+			%ul{:class=>"nav navbar-nav pull-right"}
+				%li
+					=link_to 'Home', root_path
+				%li
+					=link_to 'Confections', confections_path
+		
+		.container			
+			=yield 
+			#footer
+				.row
+					.col-md-12
+						%p.text-center
+							Todos os direitos reservados!

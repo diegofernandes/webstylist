@@ -1,0 +1,16 @@
+
+.jumbotron.text-center
+    %h1 WebStylist
+    %p A place for confect and share your web styles
+
+.row
+    -@last_confections.each do |confection|
+        .col-md-2.text-center
+            =link_to confection do
+                %h4.caption
+                    =confection.name
+                .confection-preview{:style=>"#{confection.code}"}
+                    
+
+
+
