@@ -5,11 +5,12 @@
 	=@confection.name
 
 %p
+	.confection-preview{:style => "#{@confection.code}"} 
+	%br/
 	%strong Code:
 	%pre
 		%code
 			=@confection.code
-	.confection-preview{:style => "#{@confection.code}"}
 
 = link_to 'Edit', edit_confection_path(@confection)
 |
