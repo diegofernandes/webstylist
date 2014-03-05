@@ -11,11 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140304024351) do
+ActiveRecord::Schema.define(version: 20140305014734) do
 
   create_table "confections", force: true do |t|
     t.string   "name"
     t.text     "code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "confections_tags", force: true do |t|
+    t.integer  "confection_id"
+    t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "confections_tags", ["confection_id"], name: "index_confections_tags_on_confection_id"
+  add_index "confections_tags", ["tag_id"], name: "index_confections_tags_on_tag_id"
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

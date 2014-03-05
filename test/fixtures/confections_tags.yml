@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  confection_id: 
+  tag_id: 
+
+two:
+  confection_id: 
+  tag_id: 

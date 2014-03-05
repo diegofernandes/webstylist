@@ -1,4 +1,8 @@
 Webstylist::Application.routes.draw do
+  
+  root "home#index"
+
+  get "home/index"
   resources :confections
 
   # The priority is based upon order of creation: first created -> highest priority.
