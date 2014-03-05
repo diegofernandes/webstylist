@@ -1,0 +1,16 @@
+%p{:id => "notice"}= notice
+
+%p
+	%strong Name:
+	=@confection.name
+
+%p
+	%strong Code:
+	%pre
+		%code
+			=@confection.code
+	.confection-preview{:style => "#{@confection.code}"}
+
+= link_to 'Edit', edit_confection_path(@confection)
+|
+= link_to 'Back', confections_path 

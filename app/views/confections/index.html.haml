@@ -1,0 +1,26 @@
+%h1 Listing confections
+
+%table
+    %thead
+        %tr
+            %th Name
+            %th Preview
+            %th
+            %th
+            %th
+
+    %tbody
+        -@confections.each do |confection|
+            %tr
+                %td
+                    =confection.name
+                %td
+                    .confection-preview{:style => "#{confection.code}", :title=>"#{confection.code}"}
+                %td
+                    =link_to 'Show', confection 
+                %td
+                    =link_to 'Edit', edit_confection_path(confection)
+                %td
+                    =link_to 'Destroy', confection, method: :delete, data: { confirm: 'Are you sure?' }
+
+=link_to 'New Confection', new_confection_path 
