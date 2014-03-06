@@ -17,6 +17,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem "haml"
 
+gem 'devise'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -38,7 +40,7 @@ gem 'bootstrap-sass'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
-
+# gem 'bcrypt'
 # Use unicorn as the app server
 # gem 'unicorn'
 

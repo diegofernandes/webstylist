@@ -1,8 +1,16 @@
 // Place all the styles related to the confections controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.confection-wrapper {
+    display: inline-block !important;
+    width:100px !important;
+    height:100px !important;
+    overflow: hidden !important;
+}
+
 .confection-preview {
-    display: inline-block;
+    display: block;
     width:100px;
     height:100px;
+    overflow: hidden;
 }

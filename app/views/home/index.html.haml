@@ -5,16 +5,9 @@
     =link_to confections_path do
         %span.btn.btn-lg.btn-info
             Start to Confect
-     
 
-.row
-    -@last_confections.each do |confection|
-        .col-md-2.text-center
-            =link_to confection do
-                %h4.caption
-                    =confection.name
-                .confection-preview{:style=>"#{confection.code}"}
-                    
+= render 'confections/list', :confections => @last_confections, :actions => false
+
 
 
 

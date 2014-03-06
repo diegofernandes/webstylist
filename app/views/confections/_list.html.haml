@@ -1,0 +1,16 @@
+.row
+    -confections.each do |confection|
+        .col-md-2.text-center
+            =link_to confection do
+                %h4.caption
+                    =confection.name
+                = render 'confections/preview', :confection => confection
+            -if actions
+                %br/
+                =link_to 'Edit', edit_confection_path(confection)
+                |
+                =link_to 'Destroy', confection, method: :delete, data: { confirm: 'Are you sure?' }
+-if actions
+    .row
+        .col-md-12
+            =link_to 'Confect New Style', new_confection_path, :class => 'btn btn-lg btn-info'
